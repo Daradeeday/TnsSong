@@ -1,0 +1,1 @@
+export async function lineNotify(token:string, message:string){ const res=await fetch('https://notify-api.line.me/api/notify',{method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({message}),cache:'no-store'}); if(!res.ok) throw new Error('LINE notify failed'); }

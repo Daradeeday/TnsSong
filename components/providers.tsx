@@ -1,0 +1,1 @@
+'use client';import { ReactNode,useRef } from 'react';import { QueryClient,QueryClientProvider } from '@tanstack/react-query';export default function Providers({children}:{children:ReactNode}){const qc=useRef(new QueryClient());return <QueryClientProvider client={qc.current}>{children}</QueryClientProvider>;}

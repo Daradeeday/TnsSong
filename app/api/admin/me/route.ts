@@ -1,0 +1,1 @@
+import { NextResponse } from 'next/server';import { isAdminCookieValid } from '@/lib/admin';export async function GET(){if(!isAdminCookieValid())return NextResponse.json({ok:false},{status:401});return NextResponse.json({ok:true});}
